@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="movies_test" resourceRoot="" soapui-version="3.6.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MovieMovieBinding" type="wsdl" bindingName="{urn:ActionWebService}MovieMovieBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:3000/movie/wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:3000/movie/wsdl"><con:part><con:url>http://localhost:3000/movie/wsdl</con:url><con:content><![CDATA[<definitions name="Movie" targetNamespace="urn:ActionWebService" xmlns:typens="urn:ActionWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="urn:ActionWebService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="Movie">
+        <xsd:all></xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="Search">
+    <part name="param0" type="xsd:string"/>
+  </message>
+  <message name="SearchResponse">
+    <part name="return" type="typens:Movie"/>
+  </message>
+  <message name="SearchTitle">
+    <part name="param0" type="xsd:string"/>
+  </message>
+  <message name="SearchTitleResponse">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <portType name="MovieMoviePort">
+    <operation name="Search">
+      <input message="typens:Search"/>
+      <output message="typens:SearchResponse"/>
+    </operation>
+    <operation name="SearchTitle">
+      <input message="typens:SearchTitle"/>
+      <output message="typens:SearchTitleResponse"/>
+    </operation>
+  </portType>
+  <binding name="MovieMovieBinding" type="typens:MovieMoviePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation name="Search">
+      <soap:operation soapAction="/movie/api/Search"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ActionWebService" use="encoded"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ActionWebService" use="encoded"/>
+      </output>
+    </operation>
+    <operation name="SearchTitle">
+      <soap:operation soapAction="/movie/api/SearchTitle"/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ActionWebService" use="encoded"/>
+      </input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ActionWebService" use="encoded"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="MovieService">
+    <port name="MovieMoviePort" binding="typens:MovieMovieBinding">
+      <soap:address location="http://localhost:3000/movie/api"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:3000/movie/api</con:endpoint></con:endpoints><con:operation isOneWay="false" action="/movie/api/Search" name="Search" bindingOperationName="Search" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:3000/movie/api</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <param0 xsi:type="xsd:string">wall-e</param0>
+      </urn:Search>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="/movie/api/Search"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="/movie/api/SearchTitle" name="SearchTitle" bindingOperationName="SearchTitle" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

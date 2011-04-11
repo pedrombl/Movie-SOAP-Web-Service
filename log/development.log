@@ -1,0 +1,624 @@
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 22:51:34) [GET]
+Sending data 
+Completed in 33ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 22:54:50) [GET]
+Sending data 
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-07 22:56:06) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"Wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"Wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">Wall-e</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+NameError (uninitialized constant MovieController::Imdb):
+  app/controllers/movie_controller.rb:7:in `search'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/invocation.rb:141:in `send'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/invocation.rb:141:in `perform_invocation_without_interception'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/invocation.rb:135:in `perform_invocation'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:46:in `web_service_filtered_invoke'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:37:in `web_service_direct_invoke_without_controller'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:112:in `web_service_direct_invoke'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:58:in `web_service_invoke'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:25:in `invoke_web_service_request'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:58:in `dispatch_web_service_request'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:56:in `dispatch_web_service_request'
+  (eval):1:in `api'
+
+
+Web Service Response: => #<NameError: uninitialized constant MovieController::Imdb>
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <env:Fault xmlns:n1="http://schemas.xmlsoap.org/soap/encoding/"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <faultcode xsi:type="xsd:QName">env:Server</faultcode>
+        <faultstring xsi:type="xsd:string">uninitialized constant MovieController::Imdb</faultstring>
+        <faultactor xsi:type="xsd:string">ActionWebService::Protocol::Soap::SoapProtocol</faultactor>
+        <detail xmlns:n2="http://www.ruby-lang.org/xmlns/ruby/type/custom"
+            xsi:type="n2:SOAPException">
+          <cause n4:ivars="#id19210190"
+              xmlns:n3="http://www.ruby-lang.org/xmlns/ruby/type/1.6"
+              xmlns:n4="http://www.ruby-lang.org/xmlns/ruby/type-instance"
+              xsi:type="n3:NameError">
+            <message xsi:type="xsd:string">uninitialized constant MovieController::Imdb</message>
+            <backtrace xsi:type="n1:Array"
+                n1:arrayType="xsd:anyType[75]">
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:105:in `const_missing&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/Workspace/movie_soap/app/controllers/movie_controller.rb:7:in `search&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/invocation.rb:141:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/invocation.rb:141:in `perform_invocation_without_interception&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/invocation.rb:135:in `perform_invocation&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:46:in `web_service_filtered_invoke&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:37:in `web_service_direct_invoke_without_controller&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:112:in `web_service_direct_invoke&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:58:in `web_service_invoke&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:25:in `invoke_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:58:in `dispatch_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:56:in `dispatch_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">(eval):1:in `api&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require&apos;</item>
+              <item xsi:type="xsd:string">./script/server:3</item>
+            </backtrace>
+          </cause>
+          <excn_type_name xsi:type="xsd:string">NameError</excn_type_name>
+        </detail>
+      </env:Fault>
+      <ivars href="#id19210190"></ivars>
+      <ivars id="id19210190"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <blamed_files n5:arrayType="xsd:anyType[0]"
+            xmlns:n5="http://schemas.xmlsoap.org/soap/encoding/"
+            xsi:type="n5:Array">
+        </blamed_files>
+      </ivars>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 84ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 23:01:36) [GET]
+Sending data 
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-07 23:01:39) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"Wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"Wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">Wall-e</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (1.042365): => "Wall-E (2008)                   aka WALL·E&nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain "
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:SearchResponse xmlns:n1="urn:ActionWebService"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <return xsi:type="xsd:string">Wall-E (2008)                   aka WALL·E&amp;nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain </return>
+      </n1:SearchResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 1047ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 23:29:14) [GET]
+Sending data 
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 23:32:25) [GET]
+Sending data 
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-07 23:32:47) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"Wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"Wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">Wall-e</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+ActionWebService::Casting::CastingError (Don't know how to cast Imdb::Movie to Imdb::Movie):
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:142:in `cast_to_structured_type'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:60:in `cast'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:38:in `cast_returns'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:25:in `cast_returns'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:241:in `cast_returns'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:188:in `web_service_create_response'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:62:in `web_service_invoke'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:25:in `invoke_web_service_request'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:58:in `dispatch_web_service_request'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:56:in `dispatch_web_service_request'
+  (eval):1:in `api'
+
+
+Web Service Response: => #<ActionWebService::Casting::CastingError: Don't know how to cast Imdb::Movie to Imdb::Movie>
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <env:Fault xmlns:n1="http://schemas.xmlsoap.org/soap/encoding/"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <faultcode xsi:type="xsd:QName">env:Server</faultcode>
+        <faultstring xsi:type="xsd:string">Don&apos;t know how to cast Imdb::Movie to Imdb::Movie</faultstring>
+        <faultactor xsi:type="xsd:string">ActionWebService::Protocol::Soap::SoapProtocol</faultactor>
+        <detail xmlns:n2="http://www.ruby-lang.org/xmlns/ruby/type/custom"
+            xsi:type="n2:SOAPException">
+          <cause xmlns:n3="http://www.ruby-lang.org/xmlns/ruby/type/1.6"
+              xsi:type="n3:ActionWebService..Casting..CastingError">
+            <message xsi:type="xsd:string">Don&apos;t know how to cast Imdb::Movie to Imdb::Movie</message>
+            <backtrace xsi:type="n1:Array"
+                n1:arrayType="xsd:anyType[73]">
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:142:in `cast_to_structured_type&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:60:in `cast&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:38:in `cast_returns&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:25:in `cast_returns&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:241:in `cast_returns&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:188:in `web_service_create_response&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:62:in `web_service_invoke&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:25:in `invoke_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:58:in `dispatch_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:56:in `dispatch_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">(eval):1:in `api&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require&apos;</item>
+              <item xsi:type="xsd:string">./script/server:3</item>
+            </backtrace>
+          </cause>
+          <excn_type_name xsi:type="xsd:string">ActionWebService..Casting..CastingError</excn_type_name>
+        </detail>
+      </env:Fault>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 2730ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 23:54:12) [GET]
+Sending data 
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-07 23:54:56) [GET]
+Sending data 
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-07 23:55:21) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"Wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"Wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">Wall-e</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+ActionWebService::Casting::CastingError (Don't know how to cast Movie to Movie):
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:142:in `cast_to_structured_type'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:60:in `cast'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:38:in `cast_returns'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:25:in `cast_returns'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:241:in `cast_returns'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:188:in `web_service_create_response'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:62:in `web_service_invoke'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:25:in `invoke_web_service_request'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:58:in `dispatch_web_service_request'
+  /Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:56:in `dispatch_web_service_request'
+  (eval):1:in `api'
+
+
+Web Service Response: => #<ActionWebService::Casting::CastingError: Don't know how to cast Movie to Movie>
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <env:Fault xmlns:n1="http://schemas.xmlsoap.org/soap/encoding/"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <faultcode xsi:type="xsd:QName">env:Server</faultcode>
+        <faultstring xsi:type="xsd:string">Don&apos;t know how to cast Movie to Movie</faultstring>
+        <faultactor xsi:type="xsd:string">ActionWebService::Protocol::Soap::SoapProtocol</faultactor>
+        <detail xmlns:n2="http://www.ruby-lang.org/xmlns/ruby/type/custom"
+            xsi:type="n2:SOAPException">
+          <cause xmlns:n3="http://www.ruby-lang.org/xmlns/ruby/type/1.6"
+              xsi:type="n3:ActionWebService..Casting..CastingError">
+            <message xsi:type="xsd:string">Don&apos;t know how to cast Movie to Movie</message>
+            <backtrace xsi:type="n1:Array"
+                n1:arrayType="xsd:anyType[73]">
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:142:in `cast_to_structured_type&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:60:in `cast&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:38:in `cast_returns&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/casting.rb:25:in `cast_returns&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:241:in `cast_returns&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:188:in `web_service_create_response&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:62:in `web_service_invoke&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/abstract.rb:25:in `invoke_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:58:in `dispatch_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:56:in `dispatch_web_service_request&apos;</item>
+              <item xsi:type="xsd:string">(eval):1:in `api&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Users/pedromorhyborgesleal/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require&apos;</item>
+              <item xsi:type="xsd:string">/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require&apos;</item>
+              <item xsi:type="xsd:string">./script/server:3</item>
+            </backtrace>
+          </cause>
+          <excn_type_name xsi:type="xsd:string">ActionWebService..Casting..CastingError</excn_type_name>
+        </detail>
+      </env:Fault>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 2942ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 00:04:35) [GET]
+Sending data 
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-08 00:04:52) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">wall-e</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (4.401324): => #<Movie:0x226a03c @title="Wall-E (2008)                   aka WALL·E&nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain ", @director="">
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:SearchResponse xmlns:n1="urn:ActionWebService"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <return xsi:type="n1:Movie">
+          <title xsi:type="xsd:string">Wall-E (2008)                   aka WALL·E&amp;nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain </title>
+          <director xsi:type="xsd:string"></director>
+        </return>
+      </n1:SearchResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 4407ms (View: 0, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-08 00:06:48) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"pulp fiction", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"pulp fiction") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">pulp fiction</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (4.369933): => #<Movie:0x245c8a4 @title="Pulp Fiction - Tempo de Violência (1994)                   aka Pulp Fiction&nbsp;- USA (original title)         aka  Pulp Fiction - Historky z podsvetia - Slovakia    aka  Pulp fiction - tarinoita väkivallasta - Finland    aka  Fiction pulpeuse - Canada (French title) ", @director="">
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:SearchResponse xmlns:n1="urn:ActionWebService"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <return xsi:type="n1:Movie">
+          <title xsi:type="xsd:string">Pulp Fiction - Tempo de Violência (1994)                   aka Pulp Fiction&amp;nbsp;- USA (original title)         aka  Pulp Fiction - Historky z podsvetia - Slovakia    aka  Pulp fiction - tarinoita väkivallasta - Finland    aka  Fiction pulpeuse - Canada (French title) </title>
+          <director xsi:type="xsd:string"></director>
+        </return>
+      </n1:SearchResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 4383ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 00:10:07) [GET]
+Sending data 
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-08 00:11:25) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"Search"=>{"param0"=>"wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: Search(param0=>"wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:Search soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">wall-e</param0>
+        </urn:Search>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (4.321094): => #<Movie:0x226b108 @year=2008, @title="Wall-E (2008)                   aka WALL·E&nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain ">
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:SearchResponse xmlns:n1="urn:ActionWebService"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <return xsi:type="n1:Movie">
+          <year xsi:type="xsd:int">2008</year>
+          <title xsi:type="xsd:string">Wall-E (2008)                   aka WALL·E&amp;nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain </title>
+        </return>
+      </n1:SearchResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 4326ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 13:04:30) [GET]
+Sending data 
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 13:11:11) [GET]
+Sending data 
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#api (for 127.0.0.1 at 2011-04-08 13:11:47) [POST]
+  Parameters: {"Envelope"=>{"xmlns:urn"=>"urn:ActionWebService", "Body"=>{"SearchTitle"=>{"param0"=>"wall-e", "soapenv:encodingStyle"=>"http://schemas.xmlsoap.org/soap/encoding/"}}, "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "Header"=>nil, "xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance"}}
+
+Web Service Request: SearchTitle(param0=>"wall-e") Entrypoint: api
+  <soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ActionWebService">
+     <soapenv:Header/>
+     <soapenv:Body>
+        <urn:SearchTitle soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+           <param0 xsi:type="xsd:string">wall-e</param0>
+        </urn:SearchTitle>
+     </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (1.727390): => "Wall-E (2008)                   aka WALL·E&nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain "
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <env:Body>
+      <n1:SearchTitleResponse xmlns:n1="urn:ActionWebService"
+          env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <return xsi:type="xsd:string">Wall-E (2008)                   aka WALL·E&amp;nbsp;- USA (original title)         aka  WALL·E - Der letzte räumt die Erde auf - Germany    aka  WALL-E - USA (alternative spelling)    aka  WALL·E. Batallón de limpieza - Spain </return>
+      </n1:SearchTitleResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 1735ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/api]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 13:16:53) [GET]
+Sending data 
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 13:28:39) [GET]
+Sending data 
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/movie/wsdl]
+
+
+Processing MovieController#wsdl (for 127.0.0.1 at 2011-04-08 13:30:32) [GET]
+Sending data 
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/movie/wsdl]
