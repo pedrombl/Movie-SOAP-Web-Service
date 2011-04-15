@@ -3,7 +3,6 @@ How to install this project:
 You need to install Rails 2.*
 
 After installing it, go to the directory root and type:
-sudo gem install actionpack
 sudo rake gems:install
 sudo gem install datanoise-actionwebservice --source http://gems.github.com
 
